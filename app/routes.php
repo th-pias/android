@@ -11,4 +11,12 @@
 |
 */
 
+Route::post('/', function(){
+    return Response::json(array_merge(array('request' => 'POST'), Input::all()));
+    
+});
 Route::resource('user', 'UserController');
+Route::get('/', function(){
+    return Response::json(array_merge(array('request' => 'GET'), Input::all()));
+    
+});
